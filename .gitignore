@@ -1,0 +1,6 @@
+*~
+db/*
+node_modules/crsh
+node_modules/scraper
+node_modules/taffydb
+node_modules/socket.io

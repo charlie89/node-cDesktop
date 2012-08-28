@@ -1,0 +1,7 @@
+* Readme and package.json for every module
+* Log clicked elements (and much more like referer/etc)
+* Generic Way to respond only GZIP when gzip is allowed
+* router: add api prefix for all apis, if no api then its a file
+* Keyboard Shortcuts
+* Authentication
+* Add crsh for js/less compiling/minifying and value changing (i.e. port/addr for websocket conn.)

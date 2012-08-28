@@ -1,0 +1,25 @@
+{
+  "author": {
+    "name": "Ian Smith"
+  },
+  "name": "taffydb",
+  "description": "TaffyDB is an opensouce library that brings database features into your JavaScript applications.",
+  "version": "0.0.1",
+  "directories": {
+    "lib": "./lib"
+  },
+  "homepage": "http://taffydb.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/typicaljoe/taffydb.git"
+  },
+  "engines": {
+    "node": "~0.4.12"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "main": "index.js",
+  "readme": "# TaffyDB (taffy.js)\n\nTaffyDB is an opensouce library that brings database features into your JavaScript applications.\n\n## Introduction\n\nHow you ever noticed how JavaScript object literals look a lot like records? And that if you wrap a group of them up in an array you have something that atcs a lot like a database table? TaffyDB brings powerful database funtionality to that concept and rapidly improves the way you work with data inside of JavaScript.\n\n## What makes it sticky\n\n - Extremely fast\n - Powerful JavaScript centric data selection engine\n - Database inspired features such as insert, update, unique, count, etc\n - Robust cross browser support\n - Easily extended with your own functions\n - Compatible with any DOM library (jQuery, YUI, Dojo, etc)\n\n## Create a DB\n\nJust pass in JSON:\n\n    var products = TAFFY([{\n    \t\"item\":1,\n    \t\"name\":\"Blue Ray Player\",\n    \t\"price\":99.99\n    }, {\n        \"item\":2,\n        name:\"3D TV\",\n        price:1799.99\n    }]);\n\n\n## Find data\n\nUse JSON to compare:\n\n    var item1 = products({item:1});\n    // where item is equal to 1\n    var lowPricedItems = products({price:{lt:100}});\n\t// where price is less than 100\n\tvar blueRayPlayers = products({name:{like:\"Blue Ray\"}});\n\t// where name is like \"Blue Ray\"\n\n## Use data\n\n    // update the price of the Blue Ray Player to 89.99\n    products({item:1}).update({price:89.99});\n    // loop over the records and call a function\n    products().each(function (r) {alert(r.name)});\n    // get first record\n    products().first();\n    // get last record\n    products().last();\n    // sort the records by price descending\n    products.sort(\"price desc\");\n    // select only the item names into an array\n    products().select(\"name\"); // returns [\"3D TV\",\"Blue Ray Player\"]\n    // inject values from a record into a string template\n    var row = products({item:2}).supplant(\"<tr><td>{name}</td><td>{price}</td></tr>\");\n    // row now equal to \"<tr><td>3D TV</td><td>17999.99</td></tr>\"\n\n## Documentation, support, updates\n\nView more docs and examples, get support, and get notified of updates:\n\nWeb: http://taffydb.com\nTwitter: http://twitter.com/mriansmith \n\n\n## Software License Agreement (BSD License)\nCopyright (c)\nAll rights reserved.\n\n\nRedistribution and use of this software in source and binary forms, with or without modification, are permitted provided that the following condition is met:\n\n* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\nLIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+  "_id": "taffydb@0.0.1",
+  "_from": "taffydb"
+}

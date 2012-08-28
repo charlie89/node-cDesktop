@@ -1,0 +1,87 @@
+@font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); } 
+
+html {
+   font: 13px 'Ubuntu',sans-serif;
+   color: white;        
+   background-color: #3F3F3F;
+}
+
+a {
+   color: hsl(24, 100%, 57%);
+   text-decoration: none; 
+}
+
+div#center input {
+   height: 25px;
+   width: 40%;   
+   border-color: lightgray;
+   border-width: 2px;
+   border-radius: 3px;
+   font-size: 18px;  
+   margin-left: 30%;   
+   margin-right: 5px;
+   color: black;
+}
+
+div#center button {
+   height: 32px;
+   width: 6%;
+   min-width: 40px;
+   position: absolute;   
+   margin-top: 0px;   
+   border-color: lightgray;
+   border-width: 2px;
+   border-radius: 5px;
+   background-image: url(icons/search_magnifier.png);
+   background-size: 25px;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+div#center button#online {
+   background-color: hsl(112, 100%, 33%);   
+}   
+   
+div#center button#offline {
+   background-color: hsl(0, 100%, 50%);   
+}
+
+div.results {
+   margin-top: 25px;
+   margin-left: 30%;
+   margin-bottom: 8px;
+   word-wrap: break-word;   
+   max-width: 40%;
+   text-align: left;   
+}
+
+div.resultcentered div {
+   font-size: 11px;   
+   color: lightgray;
+}
+
+div.bookmarks {
+   position: absolute;
+   left:1%;
+   top:60px;
+   width: 25%;
+   text-align: left;
+   color: hsl(24, 100%, 57%);
+}
+
+div.bookmarks div.bookmark {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   -o-text-overflow: ellipsis;
+   -moz-binding: url('assets/xml/ellipsis.xml#ellipsis');   
+}
+
+div.bookmarks a img {
+   position: relative;
+   top: 2px;   
+   height: 16px;
+   width: 16px;
+   margin-right: 5px;   
+   
+}
